@@ -15,6 +15,7 @@ sudo snap install lxd --channel=3.0/stable
 3 - Init LXC
 sudo lxc init 
 (choose all default options on the wizard, but choose to share connection)
+Would you like LXD to be available over the network? (yes/no) [default=no]: yes
 
 4 - Create a LXD container with ubuntu 18.
 sudo lxc launch ubuntu:18.04 [your container name]
