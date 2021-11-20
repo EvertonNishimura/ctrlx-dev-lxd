@@ -82,6 +82,9 @@ It means the virtual core will refuse to let you ssh into it. To be able to ssh 
 on ctrlx works. After a sucessful login on the qemu emulation screen, you can enable temporarily ssh again with:
 sudo snap set system service.ssh.disable=false
 Unfortunately, i did not find a way to way to make it permanent, meaning you need to do it everytime you need boot your device.
+obs.:
+You can route to your container with ( don´t forget to add the port to your ctrlx works):
+sudo /sbin/iptables -t nat -A PREROUTING -i eth0 -p tcp --dport [host port] -j DNAT --to-destination [container ip]:[port]
 
 
 
